@@ -13,7 +13,7 @@ jobs:
         fetch-depth: 1
         ref: main
     - name: Update GITHUB-LDAP-SYNC files
-      if: ${{ payload.project_card.note == 'test' }}
+      if: ${{ github.event.project_card.note == 'test' }}
       run: |
         echo "This is just a test"
     - name: Update GITHUB-LDAP-SYNC files
