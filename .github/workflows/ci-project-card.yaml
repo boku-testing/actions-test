@@ -1,0 +1,17 @@
+name: CI-PROJECT_CARD
+
+on:
+  project_card:
+    types: [moved]
+
+jobs:
+  log-info:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 1
+        ref: master
+    - name: Update GITHUB-LDAP-SYNC files
+      run: |
+        echo ${{ github }}
