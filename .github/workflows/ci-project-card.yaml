@@ -13,5 +13,10 @@ jobs:
         fetch-depth: 1
         ref: main
     - name: Update GITHUB-LDAP-SYNC files
+      if: ${{ github.project_card.note == 'test' }}
       run: |
-        echo ${{ github.project_card.note }}
+        echo "This is just a test"
+    - name: Update GITHUB-LDAP-SYNC files
+      if: ${{ github.project_card.note == 'testX' }}
+      run: |
+        echo "This is just a test"
