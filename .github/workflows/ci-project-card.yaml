@@ -12,4 +12,6 @@ jobs:
       with:
         fetch-depth: 1
         ref: main
-    - uses: hmarr/debug-action@v2
+    - name: Update GITHUB-LDAP-SYNC files
+      run: |
+        echo ${{ github.project_card.note }}
